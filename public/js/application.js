@@ -11,6 +11,14 @@ $(document).ready(function() {
       data: tweet,
       success: afterLoad()
     });
+// set up delay of checking
+    $.ajax({
+     type: "GET",
+     url: "/status/:job_id",
+     data:
+     success:
+    });
+
     function afterLoad(){
       $('#tweet').prop('disabled', false);
       $("#ajax_loader").remove();
@@ -22,3 +30,10 @@ $(document).ready(function() {
     }
   });
 });
+
+
+// jobs = Sidekiq::Queue.new
+// jobs.map
+//  job = jobs.first (possible each loop this here?)
+//  job.jid  ==> "long string of job id"
+//  use this somewhere

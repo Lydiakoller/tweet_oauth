@@ -37,4 +37,7 @@ post '/send_tweet' do
   redirect '/'
 end
 
-#
+get '/status/:job_id' do
+jid = params[:jid]
+job_is_complete(jid)
+end
