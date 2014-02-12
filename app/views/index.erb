@@ -9,16 +9,25 @@
   %>
   <% if @access_token %>
     <div>
-      <p>
-        <strong>token:</strong> <%= @access_token.token %><br>
-        <strong>secret:</strong> <%= @access_token.secret %><br>
-      </p>
-      <p>
+
+
+  <form id="tweet_form" action="/send_tweet" method="post">
+    <input id="tweet" type='text' placeholder='Tweet Text' name='tweet_text'>
+    <input type='submit' value='Tweet it!'>
+  </form>
+  <div id="ajax_loader">
+  </div>
+  <div id="success">
+
+</div>
+
         <button><a href="/sign_out">Sign Out</a></button>
-      </p>
     </div>
   <% else %>
     <button><a href="/sign_in">Sign In with Twitter</a></button>
   <% end %>
-  
+
 </div>
+
+
+

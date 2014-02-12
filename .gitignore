@@ -22,6 +22,7 @@ ignored/
 .irb-save-history
 chromedriver.log
 .tddium*
+twitter.yaml
 bin/
 .env
 *.swp
